@@ -1,6 +1,7 @@
 package Collections;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 class User {
     String name;
@@ -11,8 +12,8 @@ public class list {
     public static void main(String[] args) {
         ArrayList<Object> li = new ArrayList<>();
         
-        li.add("dfdf");
-        li.add("sfsd");  
+        li.add("Narayanan");
+        li.add("Guna");  
         li.add(88);
 
         User u1 = new User();
@@ -24,6 +25,13 @@ public class list {
         li.set(2, 100);
 
         System.out.println(li);
+
+        System.out.println("~~Using Iterator~~");
+        Iterator<Object> itr = li.iterator();
+        while(itr.hasNext())
+        {
+            System.out.println(itr.next());
+        }
         li.clear();
     }
 }
